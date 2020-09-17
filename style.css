@@ -1,5 +1,28 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: lightblue;
+  font-family: 'Lato', sans-serif;
+  background-image: url(./img/cafe.jpg);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  backdrop-filter: blur(10px);
+  padding: 2em;
+  text-align: center;
+  height: 60vh;
+  position: relative;
+  width: 25%;
+  border: 2px red solid;
+}
+
+.calculator-options {
+  text-align: left;
+}
+
+.results-panel {
+  display: none;
 }

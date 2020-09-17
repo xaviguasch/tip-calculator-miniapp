@@ -3,10 +3,75 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Tip Calculator - Xavi Guasch</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <div class="container">
+      <div class="tip-calculator">
+        <h1>Tip Calculator</h1>
+        <p>Use the form below to calculate your tip.</p>
+
+        <div class="calculator-options">
+          <label for="totalBillAmount">Bill Amount</label><br />
+          <input
+            type="number"
+            id="totalBillAmount"
+            name="totalBillAmount"
+            min="00.00"
+            value="50.00"
+            step="0.010"
+          />
+          <br />
+
+          <label for="tipPercentage">Tip Amount</label><br />
+          <select id="tipPercentage">
+            <option value=".05">5%</option>
+            <option value=".1">10%</option>
+            <option value=".15">15%</option>
+            <option value=".2">20%</option>
+            <option value=".25">25%</option>
+            <option value=".30">30%</option>
+          </select>
+          <br />
+
+          <label for="numPeople">How Many People In The Table?</label><br />
+          <input
+            type="number"
+            id="numPeople"
+            name="numPeople"
+            min="1"
+            value="2"
+            step="1"
+          />
+        </div>
+
+        <button class="btn" id="calculateBtn">Calculate Tip Total</button>
+      </div>
+
+      <div class="results-panel">
+        <div class="bill-display">
+          <p>Bill</p>
+          <p id="billDisplay">$00.00</p>
+        </div>
+        <div class="tip-display">
+          <p>Tip</p>
+          <p id="tipDisplay">$00.00</p>
+        </div>
+        <div class="cost-per-person-display">
+          <p>Each Person Owes</p>
+          <p id="cppDisplay">$00.00</p>
+        </div>
+        <div class="party-total">
+          <p>Total</p>
+          <p id="partyTotal">$00.00</p>
+        </div>
+      </div>
+    </div>
     <script src="./index.js"></script>
   </body>
 </html>
