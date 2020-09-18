@@ -2,27 +2,115 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Lato', sans-serif;
-  background-image: url(./img/cafe.jpg);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.6;
+  background: url(./img/cafe.jpg) no-repeat fixed center;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.title {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.title:after {
+  content: '';
+  display: block;
+  margin: 0 auto;
+  width: 20%;
+  padding-top: 0.2em;
+  border-bottom: 1px solid #fff;
+}
+
 .container {
-  backdrop-filter: blur(10px);
+  border-radius: 0.3em;
+  backdrop-filter: blur(15px);
   padding: 2em;
   text-align: center;
-  height: 60vh;
-  position: relative;
-  width: 25%;
-  border: 2px red solid;
+  width: 300px;
 }
 
 .calculator-options {
   text-align: left;
+  background: #fff;
+  color: #000000;
+  padding: 1em 0.9em;
+  border-radius: 0.3em;
 }
 
 .results-panel {
   display: none;
+  background: #fff;
+  color: black;
+  padding: 1em 0.9em;
+  border-radius: 0.3em;
+  margin-bottom: 2em;
+}
+
+.results-panel-show {
+  display: block;
+}
+
+.bold {
+  font-weight: 400;
+}
+
+.bill-display,
+.tip-display,
+.cost-per-person-display,
+.party-total {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cost-per-person-display {
+  padding-bottom: 1em;
+  border-bottom: 1px solid #dad8d8;
+}
+
+.input-bill-amount,
+.tip-percentage,
+.num-people {
+  width: 90%;
+  border: none;
+  border: 1px solid #dad8d8;
+  padding: 0.8em;
+  border-radius: 0.3em;
+}
+
+.tip-percentage {
+  width: 97%;
+}
+
+.bill-amount-div,
+.tip-percentage-div,
+.num-people-div {
+  margin: 1em auto;
+}
+
+.btn {
+  background: transparent;
+  width: 100%;
+  margin-top: 2em;
+  border: 1px solid white;
+  padding: 0.6em 0;
+  border-radius: 0.3em;
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  outline: none;
+}
+
+.btn:hover {
+  background: #fff;
+  color: black;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 4px 6px 12px -5px rgba(122, 116, 122, 1);
 }

@@ -2,6 +2,7 @@ const totalBill = document.getElementById('totalBillAmount')
 const tipSelection = document.getElementById('tipPercentage')
 const numPeople = document.getElementById('numPeople')
 const calculateBtn = document.getElementById('calculateBtn')
+const resultsPanel = document.getElementById('resultsPanel')
 let billDisplay = document.getElementById('billDisplay')
 let tipDisplay = document.getElementById('tipDisplay')
 let cppDisplay = document.getElementById('cppDisplay')
@@ -25,6 +26,7 @@ const calculateTip = (totalBillAmount, numberOfPeople, tipPercentage) => {
   let amountToPayPerPerson = totalAmountToPay / numberOfPeople
 
   displayResults(totalTip, totalAmountToPay, amountToPayPerPerson, totalBillAmount)
+  resultsPanel.classList.add('results-panel-show')
 }
 
 calculateBtn.addEventListener('click', () => {
